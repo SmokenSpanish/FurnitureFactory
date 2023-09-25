@@ -1,0 +1,6 @@
+@mixin transition($transitions, $duration: 0.3s, $delay: 0s, $function: ease) {
+  transition: $transitions;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  transition-timing-function: $function;
+}

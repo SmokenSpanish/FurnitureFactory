@@ -1,0 +1,108 @@
+.modal {
+  $parent: &;
+
+  @include transition((transform, opacity));
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  overflow-x: hidden;
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  padding: 25px;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+
+    #{$parent}__container {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    background-color: rgba(#638391, 0.75);
+  }
+
+  &__container {
+    @include transition((transform, opacity));
+    position: relative;
+    display: flex;
+    align-self: center;
+    opacity: 0;
+    z-index: 550;
+    background-color: white;
+    transform: scale(0.3);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 290px;
+
+    @include md {
+      max-width: 450px;
+      padding: 30px;
+      margin: 0 10px;
+    }
+
+    @include lg {
+      padding: 40px;
+      max-width: 490px;
+    }
+
+    &--no-mrg {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__close {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: normal;
+
+    @include md {
+      font-size: 15px;
+    }
+
+    @include lg {
+      font-size: 17px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include md {
+      font-size: 28px;
+    }
+
+    @include lg {
+      font-size: 32px;
+    }
+  }
+}
