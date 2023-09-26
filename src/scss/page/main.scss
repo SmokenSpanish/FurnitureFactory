@@ -89,6 +89,7 @@ img {
 
       span {
         color: #AC1D23;
+        line-height: 140%;
 
         @include lg {
           display: block;
@@ -214,6 +215,10 @@ img {
   }
 
   &__form {
+    @include sm {
+      padding: 20px 20px 35px;
+    }
+
     &-form {
       display: flex;
       flex-direction: column;
@@ -450,12 +455,28 @@ img {
 
 span.error.fail-alert {
   color: red;
-  font-size: 12px;
+  font-size: 10px;
   transform: translate(10px, -35px);
+
+  @include md {
+    font-size: 11px;
+  }
+
+  @include lg {
+    font-size: 12px;
+  }
 }
 
 .content__form-checkbox-label .error.fail-alert {
   position: absolute;
-  bottom: -70px;
+  bottom: -65px;
   left: 10px;
+
+  @include md {
+    bottom: -50px;
+  }
+
+  @include lg {
+    bottom: -65px;
+  }
 }

@@ -1,0 +1,79 @@
+@import '~normalize-scss/sass/_normalize.scss';
+@import './scss/abstracts/variables.scss';
+@import './scss/abstracts/mixins/import.scss';
+@import './scss/page/main.scss';
+@import './scss/fonts.scss';
+@import "./scss/modal/modal.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    color: black;
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+select,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.template,
+.grecaptcha-badge,
+.hidden {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+label, .btn {
+    cursor: pointer;
+    transition: all .3s;
+}

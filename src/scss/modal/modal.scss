@@ -8,17 +8,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   overflow-x: hidden;
-  z-index: 99999;
+  z-index: -99999;
   opacity: 0;
   pointer-events: none;
   padding: 25px;
+  display: none;
 
   &.active {
+    display: flex;
+    z-index: 99999;
     opacity: 1;
     pointer-events: auto;
 

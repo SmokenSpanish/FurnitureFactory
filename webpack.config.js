@@ -12,7 +12,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '',
   },
   mode: 'development',
   devServer: {
@@ -21,8 +20,10 @@ module.exports = {
     compress: true,
     port: 8080
   },
+
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js$/,
         use: 'babel-loader',
         exclude: '/node_modules/'
@@ -32,26 +33,24 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: [ devMode ? "style-loader" : MiniCssExtractPlugin.loader, {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader',
-          "sass-loader",
-        ]
+        test: /\.s?[ac]ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { url: false, sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ],
       },
     ]
   },
-  
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "min.css"
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

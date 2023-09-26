@@ -5,10 +5,11 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=0">
     <title>Бюро долгов</title>
+    <link rel="preload" href="./dist/min.css">
     <!--Код счетчика Яндекс-->
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
-      (function(m,e,t,r,i,k,a){m[i]=m[i] || function(){(m[i].a=m[i].a || []).push(arguments)};
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -59,7 +60,7 @@
                 <div class="content__form-container">
                     <h2>Обратный звонок</h2>
                     <p>Оставьте заявку на звонок и наш менеджер ответит на все интересующие вас вопросы</p>
-                    <form class="content__form-form js-form" action="/">
+                    <form class="content__form-form js-form js-checkout" action="/">
                         <label for="username">Ваше имя</label>
                         <input id="username" name="username" type="text" placeholder="Введите имя" aria-describedby="name">
 
@@ -73,7 +74,7 @@
                         <textarea id="comment" name="comment" type="text"
                                   placeholder="Напишите интересующий вас вопрос.."></textarea>
 
-                        <button type="button" class="content__form-btn-submit btn js-checkout">Заказать звонок</button>
+                        <button type="submit" class="content__form-btn-submit btn">Заказать звонок</button>
 
                         <label class="content__form-checkbox-label">
                             <input class="visually-hidden" type="checkbox" name="agreement" aria-describedby="checkbox-error"/>

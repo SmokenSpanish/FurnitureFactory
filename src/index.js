@@ -98,38 +98,35 @@ jQuery(document).ready(function($) {
         });
     }
 
-    $(document).on('submit', 'js-form', function(e) {
-        e.preventDefault();
-    });
+    function ajaxForm() {
+        $(document).on('submit', '.js-checkout', function(e) {
+            e.preventDefault();
+            const $form = $(this);
+            $.ajax({
+                type: 'POST',
+                url: $form.attr('action'),
+                data: '',
+                dataType: 'json',
+                success: function(response) {
+                    if(response) {
+                        if(response.success) {
+                            $form.trigger('reset');
+                            const $modalThanks = new MyModal($('#modal-success'), $(document));
+                            $modalThanks.init();
+                        } else if(response.errors) {
+                            // initNotification(response.errors.join('. '), 'error', true, true, 5000);
+                        }
+                    }
+                }
+            });
+        });
+    }
+    ajaxForm();
 
-    // function ajaxForm() {
-    //     $(document).on('click', '.js-checkout', function() {
-    //         const $form = $(this);
-    //         $.ajax({
-    //             type: 'POST',
-    //             url: $form.attr('action'),
-    //             data: '',
-    //             dataType: 'json',
-    //             success: function(response) {
-    //                 if(response) {
-    //                     if(response.success) {
-    //                         $form.trigger('reset');
-    //                         const $modalThanks = new MyModal($('#modal-success'), $(document));
-    //                         $modalThanks.init();
-    //                     } else if(response.errors) {
-    //                         // initNotification(response.errors.join('. '), 'error', true, true, 5000);
-    //                     }
-    //                 }
-    //             }
-    //         });
-    //     });
-    // }
-    // ajaxForm();
-
-    $(document).on('click', '.js-checkout', function(e) {
-        const $form = $(this).closest('.js-form');
-        $form.trigger('submit');
-        const $modalThanks = new MyModal($('#modal-success'), $(document));
-        $modalThanks.init();
-    });
+    // $(document).on('click', '.js-checkout', function(e) {
+    //     const $form = $(this).closest('.js-form');
+    //     $form.trigger('submit');
+    //     // const $modalThanks = new MyModal($('#modal-success'), $(document));
+    //     // $modalThanks.init();
+    // });
 })
