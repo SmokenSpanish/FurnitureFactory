@@ -1,4 +1,5 @@
 import './scss/base.scss';
+import './scss/fonts.scss';
 import validate from 'jquery-validation/dist/jquery.validate.js';
 import mask from 'jquery-mask-plugin';
 

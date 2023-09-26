@@ -5,7 +5,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Golos Text 400'),
-  url('../fonts/GolosText-Regular.ttf') format('truetype');
+  url('../fonts/GolosText-Regular.ttf') format('truetype'),
+  url('~/src/fonts/GolosText-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -14,7 +15,8 @@
   font-style: normal;
   font-weight: 500;
   src: local("Golos Text 500"),
-  url('../fonts/GolosText-Medium.ttf') format('truetype');
+  url('../fonts/GolosText-Medium.ttf') format('truetype'),
+  url('~/src/fonts/GolosText-Medium.ttf') format('truetype');
 }
 
 @font-face {
@@ -23,5 +25,6 @@
   font-style: normal;
   font-weight: 600;
   src: local("Golos Text 600"),
-  url('../fonts/GolosText-SemiBold.ttf') format('truetype');
+  url('../fonts/GolosText-SemiBold.ttf') format('truetype'),
+  url('~/src/fonts/GolosText-SemiBold.ttf') format('truetype');
 }
