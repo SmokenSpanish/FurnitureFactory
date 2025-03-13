@@ -8,7 +8,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './docs/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -25,7 +25,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src') // Теперь можно писать ~@/img/banner.jpg в SCSS
+      '@': path.resolve(__dirname, 'docs') // Теперь можно писать ~@/img/banner.jpg в SCSS
     }
   },
 
@@ -63,7 +63,7 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './docs/index.html'
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
