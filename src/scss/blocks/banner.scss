@@ -1,0 +1,24 @@
+.banner {
+  position: relative;
+  background-image: url("~@/img/banner-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 77px 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .3;
+  }
+
+  & > * { // Все дочерние элементы (форма и т.д.)
+    position: relative; // Чтобы они были выше псевдоэлемента
+    z-index: 1;
+  }
+}

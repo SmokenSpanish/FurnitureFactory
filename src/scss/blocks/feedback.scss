@@ -1,0 +1,36 @@
+.feedback {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    background: #fbfbfb;
+    border: 1px solid #d9d9d9;
+    width: 100%;
+    justify-content: space-between;
+    text-align: start;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 8px 12px;
+
+    @include md {
+      height: 165px;
+    }
+
+    &-text {
+      font-size: 14px;
+    }
+
+    &-author {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

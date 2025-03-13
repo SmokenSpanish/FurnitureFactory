@@ -1,0 +1,169 @@
+.cooperation {
+  .container {
+    max-width: 320px;
+
+    @include md {
+      max-width: 758px;
+    }
+
+    @include lg {
+      max-width: 1000px;
+    }
+
+    @include xl {
+      max-width: 1300px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__step {
+    display: flex;
+    width: 33%;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+
+    @include md {
+      width: 100%;
+      height: 450px;
+      flex: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 88px;
+      transform: translateX(-32px);
+      display: block;
+      width: 65px;
+      height: 65px;
+      background-size: 35px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid #F9B300;
+      border-radius: 50%;
+
+      @include md {
+        transform: translateX(-50px);
+        width: 94px;
+        height: 94px;
+        background-size: 50px;
+        top: 110px;
+      }
+
+      @include lg {
+        top: 80px;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 76px;
+      top: 173px;
+      width: 40px;
+      border-top: 2px dashed #F9B312;
+      transform: rotate(40deg);
+
+      @include md {
+        left: 108px;
+        top: 220px;
+        width: 55px;
+      }
+
+      @include lg {
+        left: 117px;
+        width: 157px;
+      }
+
+      @include xl {
+        left: 158px;
+        top: 229px;
+        width: 198px;
+      }
+    }
+
+    &:nth-child(1) { &:before { background-image: url("~@/img/cooperation/phone.png");}}
+    &:nth-child(2) { &:before { background-image: url("~@/img/cooperation/pencil.png");}}
+    &:nth-child(3) { &:before { background-image: url("~@/img/cooperation/resize.png");}}
+    &:nth-child(4) { &:before { background-image: url("~@/img/cooperation/chair.png");}}
+    &:nth-child(5) { &:before { background-image: url("~@/img/cooperation/truck.png");}}
+
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+
+      &:before {
+        top: 188px;
+
+        @include md {
+          top: 230px;
+        }
+
+        @include lg {
+          top: 270px;
+        }
+      }
+
+      &:after {
+        transform: rotate(140deg);
+      }
+    }
+
+    &:nth-child(3) {
+      &:after {
+        @include max-md {
+          left: -63px;
+          top: 424px;
+          width: 36px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      @include max-md {
+        width: 100%;
+        height: 180px;
+        flex-direction: column-reverse;
+      }
+
+      &:before {
+        @include max-md {
+          top: 50px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      &:after {
+        @include max-md {
+          left: 128px;
+          top: 203px;
+          width: 36px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__notice {
+    font-size: 14px;
+    margin-top: 50px;
+    text-align: center;
+    color: #727272;
+  }
+}

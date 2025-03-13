@@ -1,0 +1,76 @@
+.footer {
+  padding: 20px 0 0;
+  background-color: #390603;
+  color: white;
+
+  .container {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__notice {
+    font-size: 12px;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  label {
+    color: black;
+    width: 100%;
+
+    @include md {
+      width: calc(50% - 10px);
+    }
+  }
+
+  .btn {
+    background-color: inherit;
+    color: white;
+    border-color: white;
+  }
+
+  &__contacts {
+    color: white;
+
+    h2 {
+      margin-bottom: 10px;
+      text-align: end;
+    }
+
+    &-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    &-icon {
+      max-width: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-part {
+    width: 50%;
+
+    &:first-child {
+      .title {
+        text-align: start;
+      }
+
+      .btn {
+        margin: 0;
+      }
+    }
+  }
+}
