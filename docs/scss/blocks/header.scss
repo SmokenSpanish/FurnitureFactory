@@ -33,13 +33,16 @@
         justify-content: space-between;
         align-items: center;
         overflow: auto;
-        padding: 100px 0 50px;
+        padding: clamp(20px, calc(20px + 80 * ((100vw - 320px) / 1120)), 100px)
+        0
+        clamp(10px, calc(10px + 40 * ((100vw - 320px) / 1120)), 50px);
 
         li {
             padding: 10px 15px;
             transition: all .3s;
             text-transform: uppercase;
             cursor: pointer;
+            font-size: calc(12px + 0.5vw);
 
             &:hover {
                 color: #5b0c0c;
