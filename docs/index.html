@@ -5,21 +5,19 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=0">
     <title>Мебель</title>
-    <link rel="preload" href="./dist/min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="main">
     <div class="header">
         <div class="container">
-            <div class="header__img-wrapper">
-                <img src="<%=require('./img/logo.jpg')%>" alt="logo">
-            </div>
-            <p class="header-title">Фабрика мебели</p>
-            <div class="main-line"></div>
             <ul class="header-nav">
-                <li><a href="#section-1">Каталог</a></li>
-                <li><a href="#section-2">5 причин</a></li>
-                <li><a href="#section-3">Схема сотрудничества</a></li>
+                <li><a href="#section-1">о нас</a></li>
+                <li><a href="#section-2">проекты</a></li>
+                <li><a href="#section-3">почему мы</a></li>
                 <li><a href="#section-4">Отзывы</a></li>
                 <li><a href="#section-5">Контакты</a></li>
             </ul>
@@ -27,25 +25,18 @@
     </div>
 
 
-    <div class="block banner">
-        <form id="main-form" class="form js-form js-checkout" action="https://formsubmit.co/4d2bbe65734b4d547ada3e7157fc9529" method="POST">
-            <label for="username"><div>Ваше имя</div>
-            <input id="username" name="username" type="text" placeholder="Введите имя" aria-describedby="name">
-            </label>
-            <label for="phone"><div>Номер телефона</div>
-            <input class="js-phone" id="phone" name="phone" type="tel" placeholder="+7 (___)-___-__-__"
-                   aria-describedby="phone-error">
-            </label>
-            <label for="mail"><div>Электронная почта</div>
-            <input id="mail" name="mail" type="email" placeholder="Введите адрес электронной почты">
-            </label>
-            <label for="comment"><div>Комментарий</div>
-            <textarea id="comment" name="comment" type="text"
-                      placeholder="Дополнительная информация по заказу"></textarea>
-            </label>
+    <div class="block">
+        <div class="banner">
+            <div class="banner__content">
+                <img class="banner__decor" src="<%=require('./img/main-banner-background.png')%>" alt="logo">
+                <div class="banner__text-wrapper">
+                    <h1 class="title title--1">factura</h1>
+                    <h3 class="banner__subtitle">дизайн и производство корпусной мебели </h3>
+                </div>
+            </div>
+            <span class="banner__date">2026</span>
+        </div>
 
-            <button type="submit" class="form-btn-submit btn">Отправить</button>
-        </form>
     </div>
 
     <div class="block catalog" id="section-1">
@@ -158,9 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reasons__cell">
-                    <img src="<%=require('./img/comod.png')%>" alt="комод">
-                </div>
+
             </div>
         </div>
     </div>
@@ -230,13 +219,13 @@
                         </div>
 
                         <div class="footer__contacts-icon">
-                            <img src="<%=require('./img/socials/vk.png')%>" alt="logo">
+<!--                            <img src="<%=require('./img/socials/vk.png')%>" alt="logo">-->
                         </div>
                         <div class="footer__contacts-icon">
-                            <img src="<%=require('./img/socials/telegram.png')%>" alt="logo">
+<!--                            <img src="<%=require('./img/socials/telegram.png')%>" alt="logo">-->
                         </div>
                         <div class="footer__contacts-icon">
-                            <img src="<%=require('./img/socials/instagram.png')%>" alt="logo">
+<!--                            <img src="<%=require('./img/socials/instagram.png')%>" alt="logo">-->
                         </div>
                     </div>
                 </div>

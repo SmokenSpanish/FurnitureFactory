@@ -1,30 +1,12 @@
-// Museo Sans Cyrl
+// Syne – titles (loaded via Google Fonts in index.html)
+// Neutral Face – body text (add font files to docs/fonts and they will be loaded below)
+
 @font-face {
-  font-family: 'Golos Text';
+  font-family: 'Neutral Face';
   font-display: swap;
   font-style: normal;
   font-weight: 400;
-  src: local('Golos Text 400'),
-  url('../fonts/GolosText-Regular.ttf') format('truetype'),
-  url('~/docs/fonts/GolosText-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Golos Text';
-  font-display: swap;
-  font-style: normal;
-  font-weight: 500;
-  src: local("Golos Text 500"),
-  url('../fonts/GolosText-Medium.ttf') format('truetype'),
-  url('~/docs/fonts/GolosText-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Golos Text';
-  font-display: swap;
-  font-style: normal;
-  font-weight: 600;
-  src: local("Golos Text 600"),
-  url('../fonts/GolosText-SemiBold.ttf') format('truetype'),
-  url('~/docs/fonts/GolosText-SemiBold.ttf') format('truetype');
+  src: local('Neutral Face'),
+       local('NeutralFace'),
+       url('../fonts/NeutralFace.otf') format('truetype');
 }

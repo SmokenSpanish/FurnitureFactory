@@ -1,24 +1,32 @@
 .banner {
-  position: relative;
-  background-image: url("~@/img/banner-1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 77px 0;
+  &__content {
+    position: relative;
+    min-height: 75vh;
+    overflow: hidden;
+    margin-bottom: 10px;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: .3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  & > * { // Все дочерние элементы (форма и т.д.)
-    position: relative; // Чтобы они были выше псевдоэлемента
+  &__date {
+    display: block;
+    text-align: center;
+  }
+
+  &__decor {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__text-wrapper {
     z-index: 1;
+    transform: translateY(-40%);
   }
 }

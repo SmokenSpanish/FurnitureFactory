@@ -4,8 +4,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #ffeedb;
-    padding: 0 0 15px;
 
     &__img-wrapper {
         position: relative;
@@ -35,18 +33,15 @@
         justify-content: space-between;
         align-items: center;
         overflow: auto;
-        cursor: pointer;
+        padding: 100px 0 50px;
 
         li {
-            padding: 5px 15px;
+            padding: 10px 15px;
             transition: all .3s;
-            border-width: 1px;
-            border-style: solid;
-            border-color: #ffeedb;
-
+            text-transform: uppercase;
+            cursor: pointer;
 
             &:hover {
-                border-color: #F9B300;
                 color: #5b0c0c;
             }
 

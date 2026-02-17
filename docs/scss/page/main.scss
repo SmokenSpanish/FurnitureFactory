@@ -1,3 +1,5 @@
+@use '../abstracts/mixins/import' as *;
+
 // Normalize SCSS
 *,
 *::before,
@@ -18,7 +20,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'Neutral Face', sans-serif;
   background-color: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
@@ -66,43 +68,6 @@ fieldset {
 
 textarea {
   resize: vertical;
-}
-h1 {
-  font-size: 23px;
-  font-weight: 600;
-  text-transform: uppercase;
-
-  @include md {
-    font-size: 39px;
-  }
-}
-
-h2 {
-  font-weight: 500;
-
-  @include md {
-    font-size: 26px;
-  }
-
-  @include lg {
-    font-size: 32px;
-  }
-}
-
-.main {
-  &-line {
-    height: 3px;
-    background-color: #F9B312;
-    margin: 15px 0;
-  }
-}
-
-.text {
-  font-size: 11px;
-
-  @include md {
-    font-size: 19px;
-  }
 }
 
 .svg-wrapper {
@@ -161,7 +126,7 @@ h2 {
   font-weight: 600;
   margin: 30px auto 0;
   box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.41);
-  font-family: 'Golos Text', sans-serif;
+  font-family: 'Neutral Face', sans-serif;
   text-decoration: none;
   vertical-align: top;
   width: 200px;

@@ -1,4 +1,6 @@
-@import "grid";
-@import "title";
-@import "swiper";
-@import "image-overlay";
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins/import' as *;
+@forward "grid";
+@forward "title";
+@forward "swiper";
+@forward "image-overlay";

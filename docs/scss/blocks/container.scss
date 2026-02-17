@@ -1,3 +1,5 @@
+@use '../abstracts/mixins/import' as *;
+
 .container {
     position: relative;
     margin: 0 auto;
@@ -10,10 +12,6 @@
 
     @include lg {
         padding: 0;
-        max-width: 1000px;
-    }
-
-    @include xl {
-        max-width: 1300px;
+        max-width: 1200px;
     }
 }

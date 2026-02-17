@@ -1,11 +1,12 @@
-@import '~normalize-scss/sass/_normalize.scss';
-@import './abstracts/variables';
-@import './abstracts/mixins/import';
-@import './page/main.scss';
-@import './fonts';
-@import "./modal/modal";
-@import "blocks/import";
-@import "components/import";
+@use './abstracts/variables' as *;
+@use './abstracts/mixins/import' as *;
+@use './page/main.scss';
+@use './fonts';
+@use "./modal/modal";
+@use "blocks/import" as blocks;
+@use "components/import" as components;
+// normalize-scss не поддерживает @use — один @import в конце (предупреждение подавлено в webpack)
+@import 'normalize-scss/sass/normalize/import-now';
 
 *,
 *::before,
@@ -14,9 +15,14 @@
 }
 
 html {
-  font-family: 'Golos Text', sans-serif;
+  font-family: 'Neutral Face', sans-serif;
   font-weight: 400;
   color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
 }
 
 body {
@@ -25,17 +31,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #F5F5F5;
-  color: black;
+  color: #4D342F;
 }
 
 main {
   flex-grow: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
 
 p {
   margin: 0;

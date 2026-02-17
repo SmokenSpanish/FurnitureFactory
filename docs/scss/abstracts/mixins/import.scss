@@ -1,3 +1,6 @@
-@import 'media';
-@import 'transition';
-@import 'reset';
+@use 'media';
+@use 'transition';
+@use 'reset';
+@forward 'media';
+@forward 'transition';
+@forward 'reset';

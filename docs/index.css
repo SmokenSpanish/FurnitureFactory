@@ -12,7 +12,7 @@
 }
 
 html {
-    font-family: 'Golos Text', sans-serif;
+    font-family: 'Neutral Face', sans-serif;
     font-weight: 400;
     color: black;
 }
@@ -23,7 +23,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #F5F5F5;
     color: black;
 }
 
@@ -33,6 +32,7 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    font-family: 'Syne', sans-serif;
 }
 
 p {

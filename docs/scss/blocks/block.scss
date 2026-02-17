@@ -1,7 +1,9 @@
+@use '../abstracts/mixins/import' as *;
+
 .block {
   width: 100%;
-  background-color: #ffeedb;
-  padding: 30px 0;
+  background-color: white;
+  padding: 0 0 30px;
 
   p {
     font-size: 14px;
