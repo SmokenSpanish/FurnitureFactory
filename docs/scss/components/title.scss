@@ -6,10 +6,17 @@
   font-weight: 800;
 
   &--1 {
-    font-size: clamp(56px, calc(40px + 5vw), 128px);
+    font-size: clamp(56px, calc(40px + 6.1vw), 128px);
   }
 
   &--2 {
-    font-size: clamp(48px, calc(32px + 4vw), 96px);
+    font-size: clamp(38px, calc(21.4px + 5.18vw), 96px);
+  }
+
+  &--3 {
+    font-weight: 400;
+    text-align: start;
+    text-transform: uppercase;
+    font-size: clamp(32px, calc(32px + 1.11vw), 48px);
   }
 }

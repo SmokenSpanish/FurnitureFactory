@@ -1,0 +1,51 @@
+@use '../abstracts/mixins/import' as *;
+
+.steps {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 15.28vw, 300px);
+
+    @include md {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__subtitle {
+    font-size: clamp(14px, 1.11vw, 18px);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__number, &__name, &__text {
+    text-transform: uppercase;
+  }
+
+  &__number {
+    font-size: clamp(24px, 2.5vw, 48px);
+  }
+
+  &__name {
+    font-size: clamp(14px, 1.39vw, 24px);
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #4D342F80;
+  }
+}

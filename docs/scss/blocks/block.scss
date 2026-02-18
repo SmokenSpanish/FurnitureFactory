@@ -3,18 +3,13 @@
 .block {
   width: 100%;
   background-color: white;
-  padding: 0 0 200px;
+  padding: 0 0 100px;
 
-  p {
-    font-size: 14px;
-    line-height: 140%;
+  @include md {
+    padding: 0 0 100px;
+  }
 
-    @include md {
-      font-size: 15px;
-    }
-
-    @include lg {
-      font-size: 17px;
-    }
+  @include lg {
+    padding: 0 0 200px;
   }
 }
