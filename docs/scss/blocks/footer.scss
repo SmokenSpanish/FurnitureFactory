@@ -1,78 +1,46 @@
 @use '../abstracts/mixins/import' as *;
 
 .footer {
-  padding: 20px 0 0;
-  background-color: #390603;
-  color: white;
+  background-color: #fff;
+  border-top: 2px solid #4D342F80;
+  padding: 90px 0;
 
-  .container {
+  &__inner {
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
   }
 
-  &__text {
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 25px;
+  &__logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #4D342F;
   }
 
-  &__notice {
-    font-size: 12px;
-
-    span {
-      text-decoration: underline;
-    }
+  &__year {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    color: #4D342F;
   }
 
-  label {
-    color: black;
-    width: 100%;
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    @include transition(opacity);
 
-    @include md {
-      width: calc(50% - 10px);
-    }
-  }
-
-  .btn {
-    background-color: inherit;
-    color: white;
-    border-color: white;
-  }
-
-  &__contacts {
-    color: white;
-
-    h2 {
-      margin-bottom: 10px;
-      text-align: end;
+    &:hover {
+      opacity: 0.85;
     }
 
-    &-icons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-    }
-
-    &-icon {
-      max-width: 20px;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  &-part {
-    width: 50%;
-
-    &:first-child {
-      .title {
-        text-align: start;
-      }
-
-      .btn {
-        margin: 0;
-      }
+    img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
     }
   }
 }

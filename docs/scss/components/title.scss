@@ -19,4 +19,8 @@
     text-transform: uppercase;
     font-size: clamp(32px, calc(32px + 1.11vw), 48px);
   }
+
+  &--mrg-b {
+    margin-bottom: 32px;
+  }
 }

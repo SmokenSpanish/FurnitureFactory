@@ -1,0 +1,21 @@
+@use '../abstracts/mixins/import' as *;
+
+.main-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 15.28vw, 300px);
+
+  @include md {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  &__margin {
+    margin-bottom: 85px;
+  }
+}

@@ -1,6 +1,14 @@
 @use '../abstracts/mixins/import' as *;
 
 .projects {
+  &__margin {
+    margin-bottom: 80px;
+
+    @include md {
+      margin-bottom: 120px;
+    }
+  }
+
   &__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -28,7 +36,6 @@
 
     @include md {
       grid-template-columns: 1fr 1fr;
-      margin-bottom: 120px;
     }
 
     &-wrapper {

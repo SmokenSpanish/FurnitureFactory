@@ -119,10 +119,10 @@
         </div>
     </section>
 
-    <section class="projects">
-        <div class="container projects__container">
-            <div class="projects__empty"></div>
-            <div class="projects__content">
+    <section class="projects block">
+        <div class="container main-columns projects__margin">
+            <div class="main-columns__empty"></div>
+            <div class="main-columns__content">
                 <h2 class="about__title title title--2">(projects)</h2>
                 <div class="text">
                     В нашем портфолио множество разных проектов корпусной
@@ -180,15 +180,13 @@
         </div>
     </section>
 
-    <section class="reasons">
-        <div class="container projects__container">
-            <div class="projects__empty"></div>
-            <div class="projects__content">
-                <div class="projects__content">
-                    <h2 class="about__title title title--2">(why us)</h2>
-                </div>
+    <section class="reasons block">
+        <div class="container main-columns">
+            <div class="main-columns__empty"></div>
+            <div class="main-columns__content">
+                <h2 class="about__title title title--2">(why us)</h2>
 
-                <ul class="steps__list">
+                <ul class="steps main-columns__content">
                     <li class="steps__step">
                         <div>
                             <span class="steps__number">1/</span> <span class="steps__name">ИНДИВИДУАЛЬНЫЙ ПОДХОД</span>
@@ -233,6 +231,119 @@
         </div>
     </section>
 
+    <section class="main-image block">
+        <img src="<%=require('./img/main-image.jpg')%>" alt="About us">
+    </section>
+
+    <section class="feedback block">
+        <div class="container main-columns main-columns__margin">
+            <div class="main-columns__empty"></div>
+            <div class="main-columns__content">
+                <h2 class="about__title title title--2">(feedback)</h2>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="feedback__list">
+                <li class="feedback__list-card">
+                    <div class="feedback__img-wrapper">
+                        <div class="feedback__img">
+                            <img src="<%=require('./img/feedback/person-1.png')%>" alt="About us">
+                        </div>
+                        <div class="feedback__info">
+                            <span class="feedback__name">София Кузнецова</span>
+                            <span class="feedback__job">PR-менеджер</span>
+                        </div>
+                    </div>
+                    <p class="feedback__text">
+                        В factura я пришла за кухней мечты! И получила ее! Менеджер создал отличный проект, учел все
+                        пожелания, помог определиться с цветом и дизайном. Все сроки были соблюдены.
+                    </p>
+                </li>
+                <li class="feedback__list-card">
+                    <div class="feedback__img-wrapper">
+                        <div class="feedback__img">
+                            <img src="<%=require('./img/feedback/person-2.png')%>" alt="About us">
+                        </div>
+                        <div class="feedback__info">
+                            <span class="feedback__name">Артем Прытов</span>
+                            <span class="feedback__job">предприниматель</span>
+                        </div>
+                    </div>
+                    <p class="feedback__text">
+                        Остановил свой выбор на компании factura — заказал встроенную гардеробную — и остался доволен.
+                        Цена и качество радуют, все красиво, стильно и аккуратно.
+                    </p>
+                </li>
+                <li class="feedback__list-card">
+                    <div class="feedback__img-wrapper">
+                        <div class="feedback__img">
+                            <img src="<%=require('./img/feedback/person-3.png')%>" alt="About us">
+                        </div>
+                        <div class="feedback__info">
+                            <span class="feedback__name">Игорь Овсянников</span>
+                            <span class="feedback__job">бизнес-аналитик</span>
+                        </div>
+                    </div>
+                    <p class="feedback__text">
+                        В factura я пришла за кухней мечты! И получила ее! Менеджер создал отличный проект, учел все
+                        пожелания, помог определиться с цветом и дизайном. Все сроки были соблюдены.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="form block">
+        <div class="container">
+            <div class="form__container">
+                <div class="form__content">
+                    <h2 class="about__title title title--2 title--mrg-b">(contact)</h2>
+                    <h2 class="title title--3">обсудим</br> проект?</h2>
+
+                    <div class="form__body">
+                        <form class="form__form js-form" action="" method="post">
+                            <label class="form__field">
+                                <span class="form__label">ИМЯ</span>
+                                <input class="form__input" type="text" name="name" placeholder=" " autocomplete="name" required>
+                            </label>
+                            <label class="form__field">
+                                <span class="form__label">ТЕЛЕФОН</span>
+                                <input class="form__input" type="tel" name="phone" placeholder=" " autocomplete="tel" required>
+                            </label>
+                            <label class="form__field">
+                                <span class="form__label">ПОЧТА</span>
+                                <input class="form__input" type="email" name="email" placeholder=" " autocomplete="email" required>
+                            </label>
+                            <button type="submit" class="form__submit btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="form__img">
+                    <img src="<%=require('./img/form-img.jpg')%>" alt="About us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <span class="footer__logo">factura</span>
+                <span class="footer__year">2026</span>
+                <a class="footer__social" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="40" height="40" fill="url(#pattern0_2664_11)"/>
+                        <defs>
+                            <pattern id="pattern0_2664_11" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_2664_11" transform="scale(0.01)"/>
+                            </pattern>
+                            <image id="image0_2664_11" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <!--    <div class="block catalog" id="section-1">-->
 <!--        <ul class="catalog__list grid-container container">-->
