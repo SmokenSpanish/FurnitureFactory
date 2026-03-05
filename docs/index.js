@@ -9,9 +9,37 @@ import 'swiper/css';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-Swiper.use([Navigation]);
+Swiper.use([Navigation, Pagination]);
 
 jQuery(document).ready(function($) {
+
+    // Данные для попапа проектов: слайды (картинки) по индексу проекта
+    const projectsSlides = {
+        1: [
+            require('./img/catalog/catalog-main-1.jpg'),
+            require('./img/catalog/pic-1.jpg'),
+            require('./img/catalog/catalog-main-1.jpg'),
+            require('./img/catalog/pic-1.jpg')
+        ],
+        2: [
+            require('./img/catalog/catalog-main-2.jpg'),
+            require('./img/catalog/pic-1.jpg'),
+            require('./img/catalog/catalog-main-2.jpg'),
+            require('./img/catalog/pic-1.jpg')
+        ],
+        3: [
+            require('./img/catalog/catalog-main-3.jpg'),
+            require('./img/catalog/pic-1.jpg'),
+            require('./img/catalog/catalog-main-3.jpg'),
+            require('./img/catalog/pic-1.jpg')
+        ],
+        4: [
+            require('./img/catalog/catalog-main-4.jpg'),
+            require('./img/catalog/pic-1.jpg'),
+            require('./img/catalog/catalog-main-4.jpg'),
+            require('./img/catalog/pic-1.jpg')
+        ]
+    };
 
     const categoriesData = {
         kitchens: [
@@ -209,7 +237,66 @@ jQuery(document).ready(function($) {
             }, 300); // Даем время модалке открыться
         });
     }
-    initModal()
+    initModal();
+
+    // Попап проектов: открытие по клику на projects__list-item, Swiper внутри
+    let projectsSwiperInstance = null;
+    const $modalProjects = $('#modal-projects');
+    const $projectsTitle = $('.js-projects-modal-title');
+    const $projectsSwiperWrapper = $('.js-projects-swiper-wrapper');
+
+    function openProjectsModal($item) {
+        const title = $item.data('title') || '';
+        const index = parseInt($item.data('index'), 10) || 1;
+        const images = projectsSlides[index] || projectsSlides[1];
+
+        $projectsTitle.text(title);
+        $projectsSwiperWrapper.empty();
+        images.forEach(function(src) {
+            $projectsSwiperWrapper.append(
+                '<div class="swiper-slide"><img src="' + src + '" alt=""></div>'
+            );
+        });
+
+        if (projectsSwiperInstance) {
+            projectsSwiperInstance.destroy(true, true);
+            projectsSwiperInstance = null;
+        }
+
+        $modalProjects.addClass('active');
+        $('body').css('overflow', 'hidden');
+        $modalProjects.find('.js-close-modal').off('click').on('click', closeProjectsModal);
+
+        setTimeout(function() {
+            projectsSwiperInstance = new Swiper('.swiper--projects', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                pagination: {
+                    el: '.modal-projects__pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next--projects',
+                    prevEl: '.swiper-button-prev--projects'
+                }
+            });
+        }, 50);
+    }
+
+    function closeProjectsModal() {
+        $modalProjects.removeClass('active');
+        $('body').css('overflow', '');
+        if (projectsSwiperInstance) {
+            projectsSwiperInstance.destroy(true, true);
+            projectsSwiperInstance = null;
+        }
+    }
+
+    $(document).on('click', '.js-open-projects-modal', function(e) {
+        e.preventDefault();
+        openProjectsModal($(this));
+    });
 
     // Добавляем обработчик для закрытия модалки и прокрутки страницы
     $(document).on('click', '.js-order', function() {
