@@ -1,9 +1,15 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
+    background: #fff;
 
     &__img-wrapper {
         position: relative;
@@ -53,4 +59,9 @@
             }
         }
     }
+}
+
+// контент не уходит под фиксированную шапку (высота шапки: паддинги нав + строка ссылок)
+.main {
+    padding-top: clamp(80px, 18vw, 200px);
 }

@@ -297,9 +297,14 @@ jQuery(document).ready(function($) {
     });
 
     $(".header-nav a").on("click", function(event) {
-        event.preventDefault(); // Отменяем стандартное поведение ссылки
-        const target = $(this).attr("href"); // Получаем ID секции
-        $("html, body").animate({ scrollTop: $(target).offset().top }, 800); // Плавно скроллим
+        const href = $(this).attr("href");
+        if (!href || href.charAt(0) !== "#") return;
+        event.preventDefault();
+        const $target = $(href);
+        if (!$target.length) return;
+        const headerHeight = $(".header").outerHeight() || 0;
+        const scrollTo = Math.max(0, $target.offset().top - headerHeight);
+        $("html, body").animate({ scrollTop: scrollTo }, 600);
     });
 
     $(document).on('submit', '.js-checkout', function (e) {
