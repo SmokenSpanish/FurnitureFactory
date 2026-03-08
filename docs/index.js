@@ -16,29 +16,29 @@ jQuery(document).ready(function($) {
     // Данные для попапа проектов: слайды (картинки) по индексу проекта
     const projectsSlides = {
         1: [
-            require('./img/catalog/catalog-main-1.jpg'),
-            require('./img/catalog/pic-1.jpg'),
-            require('./img/catalog/catalog-main-1.jpg'),
-            require('./img/catalog/pic-1.jpg')
+            require('./img/catalog/garderob/garderob-1.jpg'),
+            require('./img/catalog/garderob/garderob-1.jpg'),
+            require('./img/catalog/garderob/garderob-1.jpg'),
+            require('./img/catalog/garderob/garderob-1.jpg'),
         ],
-        2: [
-            require('./img/catalog/catalog-main-2.jpg'),
-            require('./img/catalog/pic-1.jpg'),
-            require('./img/catalog/catalog-main-2.jpg'),
-            require('./img/catalog/pic-1.jpg')
-        ],
-        3: [
-            require('./img/catalog/catalog-main-3.jpg'),
-            require('./img/catalog/pic-1.jpg'),
-            require('./img/catalog/catalog-main-3.jpg'),
-            require('./img/catalog/pic-1.jpg')
-        ],
-        4: [
-            require('./img/catalog/catalog-main-4.jpg'),
-            require('./img/catalog/pic-1.jpg'),
-            require('./img/catalog/catalog-main-4.jpg'),
-            require('./img/catalog/pic-1.jpg')
-        ]
+        // 2: [
+        //     require('./img/catalog/catalog-main-2.jpg'),
+        //     require('./img/catalog/pic-1.jpg'),
+        //     require('./img/catalog/catalog-main-2.jpg'),
+        //     require('./img/catalog/pic-1.jpg')
+        // ],
+        // 3: [
+        //     require('./img/catalog/catalog-main-3.jpg'),
+        //     require('./img/catalog/pic-1.jpg'),
+        //     require('./img/catalog/catalog-main-3.jpg'),
+        //     require('./img/catalog/pic-1.jpg')
+        // ],
+        // 4: [
+        //     require('./img/catalog/catalog-main-4.jpg'),
+        //     require('./img/catalog/pic-1.jpg'),
+        //     require('./img/catalog/catalog-main-4.jpg'),
+        //     require('./img/catalog/pic-1.jpg')
+        // ]
     };
 
     const categoriesData = {

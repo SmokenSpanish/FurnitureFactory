@@ -50,17 +50,14 @@
     z-index: 550;
     background-color: white;
     transform: scale(0.3);
-    padding: 20px;
+    padding: 80px 100px;
     border-radius: 5px;
     max-width: 1200px;
+    min-width: 80%;
+    height: 100%;
 
     @include md {
-      padding: 30px;
       margin: 0 10px;
-    }
-
-    @include lg {
-      padding: 40px;
     }
 
     &--no-mrg {
