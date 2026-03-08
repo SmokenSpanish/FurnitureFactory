@@ -13,5 +13,8 @@
 @mixin max-md {
   @media (max-width: 767px) { @content; }
 }
+@mixin max-lg {
+  @media (max-width: 1199px) { @content; }
+}
 
 

@@ -355,7 +355,7 @@
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </li>-->
-<!--            <li class="catalog__item js-open-modal" data-src="#modal-catalog" data-category="wardrobes">-->
+<!--            <li class="catalog__item js-open-modal" data-src="#modal-catalog" data-category="wardrobe">-->
 <!--                <div class="catalog__item-container">-->
 <!--                    <div class="catalog__item-title">гардеробные</div>-->
 <!--                    <div class="catalog__item-wrapper">-->
@@ -565,19 +565,32 @@
             <header class="modal-projects__header">
                 <h2 class="modal-projects__title js-projects-modal-title title title--3">03 / ШКАФЫ-КУПЕ</h2>
                 <div class="modal-projects__header-right">
-                    <div class="modal-projects__pagination swiper-pagination"></div>
+<!--                    <div class="modal-projects__pagination swiper-pagination"></div>-->
                     <button type="button" class="modal-projects__close js-close-modal" aria-label="Закрыть">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="48" height="48" fill="url(#pattern0_2674_300)"/>
+                            <defs>
+                                <pattern id="pattern0_2674_300" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_2674_300" transform="scale(0.01)"/>
+                                </pattern>
+                                <image id="image0_2674_300" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+klEQVR4nO2dvVLCUBhEb+HmPUiwIKHQR5LKN7DU0pcGbXBwHMY/Qu7e7ztnhtqzu0YwJJNSAAAAAAAAAAAAEqDx9q62gxvVOtE0vHTTcLjZ9o9VBAzR2D9007DXNLzWGOPt+GKUchrjo5fFRtFmff/5Bx9fe21Xu5IUbVe7s51s1vdVfhsyHyly6cJGpCJ2HdgJLYhtdluxzJntBTNmbUY0U8bmhDNka1Y8cqbmA0TMEiGIAmQIE0gNu4cLpgadwwZUQ67hg6oBxzSBZeyWLrgMndIWICOXqjgUIQMHK2oWIsbwKUaM4VOQGMOnKDGGT2FiDJ/ixBiXoRkLZIyZ0AxFMsbM6IJCGeNK6B/FMsaV0R8KZoyF0C+KZoyF0TeFM4bZvRgd96zUQ+ePBo4M01EOjFEBMYgP4k+WD+JN3QfxsdcH8Y+hD+LUiQ/i5KIP4vS7D+ILKh/EV7g+iIscfBCXAfnAhXJGcCmpEVxsbQS3IxjhUIgMHCxwKkJGLlVwLECGTiV7cBm7pQ2sBhzTBVVDrmkCqkHn8MHUsHvYQAqQIVaQEiBL8wEiZWpWPGK25oQjZ2xGNENWe8FMmW3FMma3E8rcgY2IAdW74KFghg8F68b+KfuR8eORMvbPZUmOozDGuVGWHuMkwKNXv0InAAAAAAAAAABQkvAOSUhuzRj1QqcAAAAASUVORK5CYII="/>
+                            </defs>
                         </svg>
                     </button>
                 </div>
             </header>
+            <div class="modal-projects__pagination swiper-pagination"></div>
             <div class="modal-projects__swiper-wrap">
                 <div class="swiper swiper--projects">
                     <div class="swiper-wrapper js-projects-swiper-wrapper"></div>
-                    <div class="swiper-button-prev swiper-button-prev--projects"></div>
-                    <div class="swiper-button-next swiper-button-next--projects"></div>
+                    <div class="modal-projects__arrows">
+                        <div class="swiper-button-prev swiper-button-prev--projects">
+                            <img class="swiper-arrow-icon swiper-arrow-icon--left" src="<%=require('./img/arrow-right.png')%>" alt="" width="48" height="48">
+                        </div>
+                        <div class="swiper-button-next swiper-button-next--projects">
+                            <img class="swiper-arrow-icon swiper-arrow-icon--right" src="<%=require('./img/arrow-right.png')%>" alt="" width="48" height="48">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

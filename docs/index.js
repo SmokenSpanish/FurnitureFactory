@@ -21,52 +21,26 @@ jQuery(document).ready(function($) {
             require('./img/catalog/garderob/garderob-1.jpg'),
             require('./img/catalog/garderob/garderob-1.jpg'),
         ],
-        // 2: [
-        //     require('./img/catalog/catalog-main-2.jpg'),
-        //     require('./img/catalog/pic-1.jpg'),
-        //     require('./img/catalog/catalog-main-2.jpg'),
-        //     require('./img/catalog/pic-1.jpg')
-        // ],
-        // 3: [
-        //     require('./img/catalog/catalog-main-3.jpg'),
-        //     require('./img/catalog/pic-1.jpg'),
-        //     require('./img/catalog/catalog-main-3.jpg'),
-        //     require('./img/catalog/pic-1.jpg')
-        // ],
-        // 4: [
-        //     require('./img/catalog/catalog-main-4.jpg'),
-        //     require('./img/catalog/pic-1.jpg'),
-        //     require('./img/catalog/catalog-main-4.jpg'),
-        //     require('./img/catalog/pic-1.jpg')
-        // ]
-    };
+        2: [
+            require('./img/catalog/kitchen/kitchen-1.jpg'),
+            require('./img/catalog/kitchen/kitchen-2.jpg'),
+        ],
+        3: [
+            require('./img/catalog/wardrobe/wardrope-1.jpg'),
+            require('./img/catalog/wardrobe/wardrope-2.jpg'),
+            require('./img/catalog/wardrobe/wardrope-3.jpg'),
+            require('./img/catalog/wardrobe/wardrope-4.jpg'),
+            require('./img/catalog/wardrobe/wardrope-5.jpg'),
 
-    const categoriesData = {
-        kitchens: [
-            { img: 'img/picture-1.jpg', title: 'Снежная королева', subtitle: 'кухня', price: '999 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Современная кухня', subtitle: 'кухня', price: '1200 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Минималистская кухня', subtitle: 'кухня', price: '1050 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Стильная кухня', subtitle: 'кухня', price: '950 ₽' }
         ],
-        wardrobes: [
-            { img: 'img/picture-1.jpg', title: 'Гардероб 1', subtitle: 'гардеробная', price: '5000 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Гардероб 2', subtitle: 'гардеробная', price: '4500 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Гардероб 3', subtitle: 'гардеробная', price: '4000 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Гардероб 4', subtitle: 'гардеробная', price: '5500 ₽' }
-        ],
-        hallways: [
-            { img: 'img/picture-1.jpg', title: 'Прихожая 1', subtitle: 'прихожая', price: '1500 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Прихожая 2', subtitle: 'прихожая', price: '2000 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Прихожая 3', subtitle: 'прихожая', price: '1700 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Прихожая 4', subtitle: 'прихожая', price: '1800 ₽' }
-        ],
-        wardrobesSliding: [
-            { img: 'img/picture-1.jpg', title: 'Шкаф-купе 1', subtitle: 'шкаф-купе', price: '3000 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Шкаф-купе 2', subtitle: 'шкаф-купе', price: '3500 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Шкаф-купе 3', subtitle: 'шкаф-купе', price: '4000 ₽' },
-            { img: 'img/picture-1.jpg', title: 'Шкаф-купе 4', subtitle: 'шкаф-купе', price: '4500 ₽' }
+        4: [
+            require('./img/catalog/other/other-1.jpg'),
+            require('./img/catalog/other/other-2.jpg'),
+            require('./img/catalog/other/other-3.jpg'),
+            require('./img/catalog/other/other-4.jpg'),
         ]
     };
+
     class MyModal {
         constructor($modal, $btn) {
             this._modal = typeof ($modal) === 'string' ? $($modal) : $modal;
